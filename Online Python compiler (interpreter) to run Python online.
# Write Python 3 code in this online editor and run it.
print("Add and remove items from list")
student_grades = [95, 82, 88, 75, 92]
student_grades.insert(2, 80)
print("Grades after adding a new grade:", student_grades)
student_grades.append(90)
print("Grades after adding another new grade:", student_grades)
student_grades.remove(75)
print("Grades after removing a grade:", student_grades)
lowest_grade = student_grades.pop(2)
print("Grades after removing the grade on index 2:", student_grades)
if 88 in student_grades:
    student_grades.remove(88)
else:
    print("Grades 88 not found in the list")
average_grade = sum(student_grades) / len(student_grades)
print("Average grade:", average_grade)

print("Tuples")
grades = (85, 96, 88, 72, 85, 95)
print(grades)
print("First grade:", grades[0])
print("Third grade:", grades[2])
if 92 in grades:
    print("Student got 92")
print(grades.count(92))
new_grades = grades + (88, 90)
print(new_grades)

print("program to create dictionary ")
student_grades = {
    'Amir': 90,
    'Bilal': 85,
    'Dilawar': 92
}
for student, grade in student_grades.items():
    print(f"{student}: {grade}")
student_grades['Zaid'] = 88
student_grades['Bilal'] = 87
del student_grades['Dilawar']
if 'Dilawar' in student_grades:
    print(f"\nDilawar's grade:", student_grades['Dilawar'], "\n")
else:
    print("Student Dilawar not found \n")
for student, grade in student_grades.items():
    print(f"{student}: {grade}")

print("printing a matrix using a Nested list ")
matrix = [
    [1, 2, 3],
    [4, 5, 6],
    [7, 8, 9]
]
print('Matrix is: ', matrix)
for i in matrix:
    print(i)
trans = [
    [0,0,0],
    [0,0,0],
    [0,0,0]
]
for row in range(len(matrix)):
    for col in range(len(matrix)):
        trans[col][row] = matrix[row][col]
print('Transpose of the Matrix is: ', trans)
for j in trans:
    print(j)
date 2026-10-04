@@ -1,0 +1,68 @@
+Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+print("Add and remove items from list")
+student_grades = [95, 82, 88, 75, 92]
+student_grades.insert(2, 80)
+print("Grades after adding a new grade:", student_grades)
+student_grades.append(90)
+print("Grades after adding another new grade:", student_grades)
+student_grades.remove(75)
+print("Grades after removing a grade:", student_grades)
+lowest_grade = student_grades.pop(2)
+print("Grades after removing the grade on index 2:", student_grades)
+if 88 in student_grades:
+    student_grades.remove(88)
+else:
+    print("Grades 88 not found in the list")
+average_grade = sum(student_grades) / len(student_grades)
+print("Average grade:", average_grade)
+
+print("Tuples")
+grades = (85, 96, 88, 72, 85, 95)
+print(grades)
+print("First grade:", grades[0])
+print("Third grade:", grades[2])
+if 92 in grades:
+    print("Student got 92")
+print(grades.count(92))
+new_grades = grades + (88, 90)
+print(new_grades)
+
+print("program to create dictionary ")
+student_grades = {
+    'Amir': 90,
+    'Bilal': 85,
+    'Dilawar': 92
+}
+for student, grade in student_grades.items():
+    print(f"{student}: {grade}")
+student_grades['Zaid'] = 88
+student_grades['Bilal'] = 87
+del student_grades['Dilawar']
+if 'Dilawar' in student_grades:
+    print(f"\nDilawar's grade:", student_grades['Dilawar'], "\n")
+else:
+    print("Student Dilawar not found \n")
+for student, grade in student_grades.items():
+    print(f"{student}: {grade}")
+
+print("printing a matrix using a Nested list ")
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print('Matrix is: ', matrix)
+for i in matrix:
+    print(i)
+trans = [
+    [0,0,0],
+    [0,0,0],
+    [0,0,0]
+]
+for row in range(len(matrix)):
+    for col in range(len(matrix)):
+        trans[col][row] = matrix[row][col]
+print('Transpose of the Matrix is: ', trans)
+for j in trans:
+    print(j)
